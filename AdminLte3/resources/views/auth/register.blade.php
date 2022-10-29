@@ -26,7 +26,7 @@
                 <p class="login-box-msg">Register a new membership</p>
 
                 <form action="{{ route('register') }}" method="post">
-                    @csrf   
+                    @csrf
                     <div class="input-group mb-3">
                         <input id="name" type="text" placeholder="Full name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                         <div class="input-group-append">
@@ -46,7 +46,7 @@
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
                             </div>
-                        </div>                        
+                        </div>
                         @error('email')
                             <span class="text-danger">
                                 {{ $message }}
@@ -59,7 +59,7 @@
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
                             </div>
-                        </div>                                             
+                        </div>
                         @error('password')
                             <span class="text-danger">
                                 {{ $message }}
